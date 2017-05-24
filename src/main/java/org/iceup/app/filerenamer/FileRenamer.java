@@ -1,13 +1,10 @@
 package org.iceup.app.filerenamer;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import javax.swing.JTextArea;
-import javax.swing.SwingWorker;
+import javax.swing.text.DefaultCaret;
 
 import org.iceup.app.filerenamer.util.StringUtil;
 
@@ -37,6 +34,10 @@ public class FileRenamer {
 		this.addCreatedDate = addCreatedDate;
 		this.replaceWith = replaceWith;
 		this.textAreaLog = textAreaLog;
+
+		// Following two lines make TextArea automatically scroll down when something added to it.
+		DefaultCaret caret = (DefaultCaret)textAreaLog.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 	}
 	
 	public String getNewFileName(String originalFileName)
@@ -172,6 +173,7 @@ public class FileRenamer {
 				}
 				
 				textAreaLog.append(message);
+				textAreaLog.update(textAreaLog.getGraphics());	// Update TextArea every time when message has been updated
 				
 				Thread.yield();
 			}// End of for
