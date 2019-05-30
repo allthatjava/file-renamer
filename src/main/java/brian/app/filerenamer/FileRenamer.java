@@ -1,4 +1,4 @@
-package org.iceup.app.filerenamer;
+package brian.app.filerenamer;
 
 import java.io.File;
 import java.util.Calendar;
@@ -6,7 +6,7 @@ import java.util.Calendar;
 import javax.swing.JTextArea;
 import javax.swing.text.DefaultCaret;
 
-import org.iceup.app.filerenamer.util.StringUtil;
+import brian.app.filerenamer.util.StringUtil;
 
 public class FileRenamer {
 

@@ -1,4 +1,4 @@
-package org.iceup.app.filerenamer.ui;
+package brian.app.filerenamer.ui;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -27,7 +27,8 @@ import org.dyno.visual.swing.layouts.Bilateral;
 import org.dyno.visual.swing.layouts.Constraints;
 import org.dyno.visual.swing.layouts.GroupLayout;
 import org.dyno.visual.swing.layouts.Leading;
-import org.iceup.app.filerenamer.FileRenamer;
+
+import brian.app.filerenamer.FileRenamer;
 
 
 

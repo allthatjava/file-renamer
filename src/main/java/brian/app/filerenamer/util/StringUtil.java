@@ -1,4 +1,4 @@
-package org.iceup.app.filerenamer.util;
+package brian.app.filerenamer.util;
 
 public class StringUtil 
 {
